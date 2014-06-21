@@ -5,7 +5,7 @@
     
     var nextID = 1;
     
-    if (Document.hasOwnProperty('uniqueID')) {
+    if (Document.prototype.hasOwnProperty('uniqueID')) {
         return;
     }
     
