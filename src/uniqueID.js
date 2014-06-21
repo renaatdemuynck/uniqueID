@@ -5,7 +5,7 @@
     
     var nextID = 1;
     
-    if (document.uniqueID !== undefined) {
+    if (Document.hasOwnProperty('uniqueID')) {
         return;
     }
     
