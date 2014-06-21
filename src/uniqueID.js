@@ -24,7 +24,7 @@
     Object.defineProperty(Element.prototype, 'uniqueID', {
         get: function () {
             // redefine the property so that the generator will not be called again
-            Object.defineProperty(Element.prototype, 'uniqueID', {
+            Object.defineProperty(this, 'uniqueID', {
                 value: document.uniqueID,
                 writable: false,
                 enumerable: false,
