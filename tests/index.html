@@ -25,6 +25,24 @@
                 assert.equal(getId(document), (id + 3));
             });
             
+            // 'el.uniqueID' should give the same id each time it is used
+            QUnit.test('Element.uniqueID', function(assert) {
+                var id = getId(document),
+                    el = document.createElement('div');
+                assert.equal(getId(el), (id + 1));
+                assert.equal(getId(el), (id + 1));
+                assert.equal(getId(el), (id + 1));
+            });
+            
+            // 'el.uniqueID' should give a different id on different elements
+            QUnit.test('Element.uniqueID', function(assert) {
+                var id = getId(document),
+                    el1 = document.createElement('div'),
+                    el2 = document.createElement('div');
+                assert.equal(getId(el1), (id + 1));
+                assert.equal(getId(el2), (id + 2));
+            });
+            
         };
         
     </script>
