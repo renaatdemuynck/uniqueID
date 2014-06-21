@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>'uniqueID' tests</title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.14.0.css">
+    <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
+    <script src="../src/uniqueID.js"></script>
+    <script>
+        
+        function init() {
+        
+            'use strict';
+            
+            /** Gets the numeric part of the id */
+            function getId(el) {
+                return Number(String(el.uniqueID).match(/\d+$/));
+            }
+            
+            // 'document.uniqueID' should give a new id each time it is used
+            QUnit.test('Document.uniqueID', function(assert) {
+                var id = getId(document);
+                assert.equal(getId(document), (id + 1));
+                assert.equal(getId(document), (id + 2));
+                assert.equal(getId(document), (id + 3));
+            });
+            
+        };
+        
+    </script>
+</head>
+<body onload="init()">
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+</body>
+</html>
