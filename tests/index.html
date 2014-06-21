@@ -20,6 +20,7 @@
             // 'document.uniqueID' should give a new id each time it is used
             QUnit.test('Document.uniqueID', function(assert) {
                 var id = getId(document);
+                
                 assert.equal(getId(document), (id + 1));
                 assert.equal(getId(document), (id + 2));
                 assert.equal(getId(document), (id + 3));
@@ -29,6 +30,7 @@
             QUnit.test('Element.uniqueID', function(assert) {
                 var id = getId(document),
                     el = document.createElement('div');
+                    
                 assert.equal(getId(el), (id + 1));
                 assert.equal(getId(el), (id + 1));
                 assert.equal(getId(el), (id + 1));
@@ -39,15 +41,16 @@
                 var id = getId(document),
                     el1 = document.createElement('div'),
                     el2 = document.createElement('div');
+                    
                 assert.equal(getId(el1), (id + 1));
                 assert.equal(getId(el2), (id + 2));
             });
             
-        };
+        }
         
     </script>
 </head>
-<body onload="init()">
+<body onload="init();">
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
 </body>
