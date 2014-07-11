@@ -5,6 +5,10 @@
     
     var nextID = 1;
     
+    if (window.Document === undefined) {
+        return;
+    }
+    
     if (Document.prototype.hasOwnProperty('uniqueID')) {
         return;
     }
