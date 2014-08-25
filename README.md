@@ -1,3 +1,4 @@
+[ ![Codeship Status for renaatdemuynck/uniqueID](https://codeship.io/projects/57f13bb0-0e6e-0132-89ef-1e51a3033676/status)](https://codeship.io/projects/32411)
 
 # uniqueID shim
 
